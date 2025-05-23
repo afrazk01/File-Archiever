@@ -15,11 +15,6 @@ This app allows users to:
 ![App Screenshot](https://github.com/afrazk01/File-Archiever/blob/main/Screenshot%20from%202025-05-23%2009-32-24.png?raw=true)
 
 ---
-## 📥 Download
-
-Download the executable from the latest release:
-
-👉 [Download File Archiver App](https://github.com/afrazk01/File-Archiever/releases/download/v1.0.0/gui)
 
 ## 🛠️ Technologies Used
 
