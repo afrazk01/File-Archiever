@@ -35,7 +35,7 @@ layout = [
 
 window = sg.Window('Zip & Unzip Tool', layout, resizable=True)
 
-# Event Loop
+
 while True:
     event, values = window.read()
     if event == sg.WINDOW_CLOSED:
@@ -45,24 +45,24 @@ while True:
         files = values['-FILES-'].split(';') if values['-FILES-'] else []
         dest = values['-ZIP_DEST-']
         if not files or not dest:
-            print("⚠️ Please select files and a destination folder.")
+            print("Please select files and a destination folder.")
         else:
             try:
                 zip_path = zip_files(files, dest)
-                print(f"✅ ZIP created: {zip_path}")
+                print(f"ZIP created: {zip_path}")
             except Exception as e:
-                print(f"❌ Error zipping files: {e}")
+                print(f"Error zipping files: {e}")
 
     elif event == '-UNZIP-':
         zip_file = values['-ZIP_FILE-']
         dest = values['-UNZIP_DEST-']
         if not zip_file or not dest:
-            print("⚠️ Please select a ZIP file and a destination folder.")
+            print("Please select a ZIP file and a destination folder.")
         else:
             try:
                 unzip_file(zip_file, dest)
-                print(f"✅ Unzipped to: {dest}")
+                print(f"Unzipped to: {dest}")
             except Exception as e:
-                print(f"❌ Error unzipping file: {e}")
+                print(f"Error unzipping file: {e}")
 
 window.close()
